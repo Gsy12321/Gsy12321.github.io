@@ -1,0 +1,16 @@
+# 网站标题
+site_name: 我的个人网站
+# 网站描述（可选）
+site_description: 基于mkdocs+GitHub Pages的个人站点
+# 使用Material主题（需提前安装mkdocs-material）
+theme:
+  name: material
+# 导航栏配置（对应docs下的markdown文件）
+nav:
+  - 首页: index.md
+  - 关于我: about.md  # 后续可在docs下创建about.md
+# 代码高亮（可选）
+markdown_extensions:
+  - codehilite
+  - toc:
+      permalink: true
