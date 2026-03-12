@@ -9,6 +9,7 @@ theme:
 nav:
   - 首页: index.md
   - 关于我: about.md  # 后续可在docs下创建about.md
+  - 教程: 教程.md
 # 代码高亮（可选）
 markdown_extensions:
   - codehilite
