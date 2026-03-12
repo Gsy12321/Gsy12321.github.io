@@ -9,8 +9,8 @@ theme:
   name: material
   # 主题配色（可自选：indigo、blue、red、green、purple 等）
   palette:
-    primary: indigo  # 主色调
-    accent: teal     # 强调色
+    primary: black  # 主色调
+    accent: red     # 强调色
   # 界面定制
   features:
     - navigation.tabs        # 顶部标签导航
@@ -37,7 +37,7 @@ nav:
       # 可扩展子菜单，示例：
       # - 联系方式: about/contact.md
   - 教程:
-      - 基础教程: 教程.md
+      - Mkdocs网页教程: 教程.md
       # 可按教程分类扩展，示例：
       # - MkDocs 配置: 教程/mkdocs-config.md
       # - GitHub Pages 部署: 教程/github-pages.md
