@@ -1,17 +1,80 @@
-# 网站标题
-site_name: 我的个人网站
-# 网站描述（可选）
-site_description: 基于mkdocs+GitHub Pages的个人站点
-# 使用Material主题（需提前安装mkdocs-material）
+# 网站基础配置
+site_name: 众传
+site_description: 基于 mkdocs + GitHub Pages 打造的个人站点
+site_author: 众传  # 新增作者信息
+site_url: https://your-username.github.io/your-repo/  # 替换为实际站点URL
+
+# 主题配置（Material 主题深度定制）
 theme:
   name: material
-# 导航栏配置（对应docs下的markdown文件）
+  # 主题配色（可自选：indigo、blue、red、green、purple 等）
+  palette:
+    primary: indigo  # 主色调
+    accent: teal     # 强调色
+  # 界面定制
+  features:
+    - navigation.tabs        # 顶部标签导航
+    - navigation.sections    # 导航栏分组折叠
+    - navigation.expand      # 展开所有导航项
+    - navigation.top         # 返回顶部按钮
+    - search.suggest         # 搜索建议
+    - search.highlight       # 搜索结果高亮
+    - content.tabs.link      # 内容标签链接
+    - content.code.copy      # 代码块复制按钮
+  # 自定义字体（可选）
+  font:
+    text: Noto Sans SC       # 中文正文字体
+    code: JetBrains Mono    # 代码字体
+  # 页脚配置
+  footer:
+    copyright: Copyright &copy; 2024 众传
+
+# 导航栏配置（结构化优化）
 nav:
   - 首页: index.md
-  - 关于我: about.md  # 后续可在docs下创建about.md
-  - 教程: 教程.md
-# 代码高亮（可选）
+  - 关于我: 
+      - 个人简介: about.md
+      # 可扩展子菜单，示例：
+      # - 联系方式: about/contact.md
+  - 教程:
+      - 基础教程: 教程.md
+      # 可按教程分类扩展，示例：
+      # - MkDocs 配置: 教程/mkdocs-config.md
+      # - GitHub Pages 部署: 教程/github-pages.md
+
+# 扩展插件 & Markdown 增强
 markdown_extensions:
-  - codehilite
+  - codehilite:
+      guess_lang: false  # 禁用自动语言检测
+      use_pygments: true # 使用 Pygments 高亮
+      pygments_style: monokai  # 代码高亮风格（可选：github、vs、monokai 等）
   - toc:
-      permalink: true
+      permalink: true    # 锚点链接
+      toc_depth: 3      # 目录深度
+  - admonition          # 提示框（note/warning/tip 等）
+  - pymdownx.details    # 折叠面板
+  - pymdownx.superfences # 嵌套代码块
+  - attr_list           # 图片/链接属性自定义
+  - md_in_html          # HTML 中嵌套 Markdown
+
+# 额外配置
+extra:
+  social:  # 社交图标（需替换为自己的链接）
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/your-id
+    - icon: fontawesome/solid/envelope
+      link: mailto:your-email@example.com
+  generator: false  # 隐藏 MkDocs 生成器标识
+
+# 插件（需提前安装：pip install mkdocs-material mkdocs-glightbox mkdocs-minify-plugin）
+plugins:
+  - glightbox  # 图片灯箱（点击放大）
+  - search:    # 搜索优化
+      lang: zh  # 中文搜索
+  - minify:    # 资源压缩（提升加载速度）
+      minify_html: true
+      minify_css: true
+      minify_js: true
+      remove_comments: true
