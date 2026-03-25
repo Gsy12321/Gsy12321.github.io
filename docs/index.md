@@ -1,11 +1,11 @@
-# 欢迎来到众传
+# 起源之地
 
-寻求帮助 [mkdocs.org](https://www.mkdocs.org).
+吾以剑为骨，以墨为魂，记录此间所学所悟。
 
-## 分类
+## 工坊指令
+- `mkdocs new [dir-name]` - 开辟新的工坊卷宗
+- `mkdocs serve` - 点亮工坊灯火，实时阅览卷宗
+- `mkdocs build` - 装订成册，封存于石塔
+- `mkdocs -h` - 问询工坊执事，获取指引
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
+## 工坊布局

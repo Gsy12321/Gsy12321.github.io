@@ -1,0 +1,61 @@
+/* 中世纪风格全局样式 */
+:root {
+  /* 覆盖Material默认变量，强化中世纪质感 */
+  --md-bg-color: #f5f0e8;          /* 羊皮纸底色 */
+  --md-bg-color--light: #e8d9c3;   /* 浅棕（木质纹理底色） */
+  --md-text-color: #4a2c14;        /* 深棕文字（墨水色） */
+  --md-primary-fg-color: #8b4513;  /* 牛皮棕 */
+  --md-primary-fg-color--light: #a0522d;
+  --md-primary-fg-color--dark: #5c3317;
+  --md-accent-fg-color: #d4af37;   /* 暗金色（黄铜） */
+}
+
+/* 页面背景添加羊皮纸纹理 */
+.md-container {
+  background-image: url('../assets/images/medieval-bg.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-opacity: 0.1;
+}
+
+/* 卡片/面板添加木质边框 */
+.md-content__inner {
+  border: 2px solid #8b4513;
+  border-radius: 4px;
+  padding: 2rem;
+  background-color: rgba(245, 240, 232, 0.95);
+  box-shadow: 0 4px 8px rgba(74, 44, 20, 0.2);
+}
+
+/* 标题添加中世纪装饰线 */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 0.5rem;
+  font-family: "MedievalSharp", serif;
+  color: #5c3317;
+}
+
+/* 按钮/链接添加金属质感 */
+.md-button, .md-nav__link, .md-typeset a {
+  color: #8b4513 !important;
+  font-family: "MedievalSharp", serif;
+}
+.md-button:hover, .md-nav__link:hover, .md-typeset a:hover {
+  color: #d4af37 !important;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* 代码块添加羊皮纸质感 */
+.md-typeset .codehilite, .md-typeset pre {
+  background-color: #f0e6d2 !important;
+  border: 1px solid #8b4513;
+  border-radius: 2px;
+}
+
+/* 搜索框复古样式 */
+.md-search__input {
+  background-color: #f0e6d2;
+  border: 1px solid #8b4513;
+  color: #4a2c14;
+}

@@ -1,79 +1,77 @@
-# 网站基础配置
-site_name: 众传
-site_description: 基于 mkdocs + GitHub Pages 打造的个人站点
-site_author: 众传  # 新增作者信息
-site_url: https://your-username.github.io/your-repo/  # 替换为实际站点URL
 
-# 主题配置（Material 主题深度定制）
+# 新增：加载自定义中世纪风格CSS
+extra_css:
+  - stylesheets/medieval.css
+
+# 网站基础配置
+site_name: 达尔姆斯  # 调整站点名称为中世纪风格
+site_description: 基于 mkdocs + GitHub Pages 打造的中世纪风格个人站点
+site_author: 达尔姆斯
+site_url: https://your-username.github.io/your-repo/
+
+# 合并后的主题配置（删除重复的theme节点）
 theme:
   name: material
-  # 主题配色（可自选：indigo、blue、red、green、purple 等）
+  custom_dir: docs/overrides  # 自定义模板目录
+  # 中世纪配色（深棕/暗红/暗金为主）
   palette:
-    primary: black  # 主色调
-    accent: red     # 强调色
-  # 界面定制
+    primary: brown    # 主色调：深棕色（中世纪皮革/木质质感）
+    accent: amber     # 强调色：暗金色（中世纪金属/徽章质感）
+  # 界面定制（保留核心功能，弱化现代感）
   features:
-    - navigation.tabs        # 顶部标签导航
-    - navigation.sections    # 导航栏分组折叠
-    - navigation.expand      # 展开所有导航项
-    - navigation.top         # 返回顶部按钮
-    - search.suggest         # 搜索建议
-    - search.highlight       # 搜索结果高亮
-    - content.tabs.link      # 内容标签链接
-    - content.code.copy      # 代码块复制按钮
-  # 自定义字体（可选）
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  # 中世纪风格字体（替换为复古衬线字体）
   font:
-    text: Noto Sans SC       # 中文正文字体
-    code: JetBrains Mono    # 代码字体
-  # 页脚配置
+    text: "MedievalSharp"       # 中世纪手写风格字体（Google Fonts）
+    code: "UnifrakturMaguntia"  # 中世纪哥特风格代码字体
+  # 页脚配置（中世纪版权文案）
   footer:
-    copyright: Copyright &copy; 2024 众传
+    copyright: "Copyright &copy; 2026 达尔姆斯 | 以剑与墨，书写传奇"
 
-# 导航栏配置（结构化优化）
+# 核心：补全导航配置（指定页面关联，恢复教程内容）
 nav:
   - 首页: index.md
-  - 关于我: 
-      - 个人简介: about.md
-      # 可扩展子菜单，示例：
-      # - 联系方式: about/contact.md
-  - 教程:
-      - Mkdocs网页教程: 教程.md
-      # 可按教程分类扩展，示例：
-      # - MkDocs 配置: 教程/mkdocs-config.md
-      # - GitHub Pages 部署: 教程/github-pages.md
+  - 关于我: about.md  # 明确about.md对应“关于我”
+  - 教程: tutorial.md
 
 # 扩展插件 & Markdown 增强
 markdown_extensions:
   - codehilite:
-      guess_lang: false  # 禁用自动语言检测
-      use_pygments: true # 使用 Pygments 高亮
-      pygments_style: monokai  # 代码高亮风格（可选：github、vs、monokai 等）
+      guess_lang: false
+      use_pygments: true
+      pygments_style: "tango"  # 替换为偏复古的代码高亮风格
   - toc:
-      permalink: true    # 锚点链接
-      toc_depth: 3      # 目录深度
-  - admonition          # 提示框（note/warning/tip 等）
-  - pymdownx.details    # 折叠面板
-  - pymdownx.superfences # 嵌套代码块
-  - attr_list           # 图片/链接属性自定义
-  - md_in_html          # HTML 中嵌套 Markdown
+      permalink: true
+      toc_depth: 3
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
 
-# 额外配置
+# 额外配置（中世纪风格社交图标/文案）
 extra:
-  social:  # 社交图标（需替换为自己的链接）
-    - icon: fontawesome/brands/github
+  social:  # 替换为中世纪风格图标（用盾牌/剑等替代现代社交图标）
+    - icon: fontawesome/solid/shield-halved  # 盾牌图标（替代GitHub）
       link: https://github.com/your-username
-    - icon: fontawesome/brands/zhihu
+    - icon: fontawesome/solid/pen-fancy       # 羽毛笔图标（替代知乎）
       link: https://www.zhihu.com/people/your-id
-    - icon: fontawesome/solid/envelope
+    - icon: fontawesome/solid/envelope       # 信封（保留，符合中世纪通信）
       link: mailto:your-email@example.com
-  generator: false  # 隐藏 MkDocs 生成器标识
+  generator: false  # 隐藏现代感的MkDocs生成器标识
 
-# 插件（需提前安装：pip install mkdocs-material mkdocs-glightbox mkdocs-minify-plugin）
+# 插件
 plugins:
-  - glightbox  # 图片灯箱（点击放大）
-  - search:    # 搜索优化
-      lang: zh  # 中文搜索
-  - minify:    # 资源压缩（提升加载速度）
+  - glightbox
+  - search:
+      lang: zh
+  - minify:
       minify_html: true
       minify_css: true
       minify_js: true
