@@ -2,17 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://your-username.github.io/your-repo/</loc>
-         <lastmod>2026-03-12</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo/404/</loc>
+         <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://your-username.github.io/your-repo/about/</loc>
-         <lastmod>2026-03-12</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-03-25</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo/%E6%95%99%E7%A8%8B/</loc>
-         <lastmod>2026-03-12</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://your-username.github.io/your-repo/tutorial/</loc>
+         <lastmod>2026-03-25</lastmod>
     </url>
 </urlset>
